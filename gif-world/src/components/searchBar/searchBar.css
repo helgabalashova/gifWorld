@@ -2,6 +2,13 @@
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr;
+    position: fixed;
+    top: 65px;
+    right: 0;
+    left:0;
+    /* overflow:hidden; */
+    background-color: #353a41;
+    /* z-index: 0; */
 }
 
 .input {
@@ -15,4 +22,8 @@
 
 input:focus {
     border: 2px solid #c31bde;
+}
+
+.negative-index {
+    z-index: -1!important;
 }

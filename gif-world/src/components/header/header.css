@@ -4,8 +4,12 @@
     border-bottom: 2px solid #6a7481;
     box-shadow: 0 4px 2px -2px #6a7481;
     display: grid;
-    grid-template-columns: 1fr 6fr;
-
+    grid-template-columns: 1fr 6fr 2fr;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow:hidden;
+    background-color: #353a41;
 }
   
 h1 {

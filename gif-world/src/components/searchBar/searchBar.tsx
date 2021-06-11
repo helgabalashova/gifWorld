@@ -9,10 +9,7 @@ class SearchBar extends Component<{parentCallback: any},{searchString:string}> {
         searchString: ""
     }
     onInputChange(event:any) {
-        // console.log(event.target.value);
         this.setState({searchString: event.target.value}, this.sendData);
-        // console.log(this.state.searchString);
-        // this.sendData(event.target.value);
     }
 
     sendData = () => {
@@ -21,7 +18,7 @@ class SearchBar extends Component<{parentCallback: any},{searchString:string}> {
 
     render() {
         return (
-            <div className="searchBar">
+            <div className="searchBar" id="searchBar">
                 <input
                     className="input"
                     name = "searchString"

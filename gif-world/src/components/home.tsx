@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import ReactDom from "react-dom";
 import Header from "./header/header";
 import SearchBar from "./searchBar/searchBar";
 import SearchResults from "./searchResults/searchResults";
+import { Route, Switch } from "react-router-dom";
+import About from "./about/about";
 
 
 class Home extends Component<{},{parentCallback: string}> {
@@ -16,11 +17,23 @@ class Home extends Component<{},{parentCallback: string}> {
 
     render() {
         return (
-            <div>
-                <Header></Header>
-                <SearchBar parentCallback = {this.callbackFunction}/>
-                <SearchResults dataFromParent = {this.state.parentCallback} />
-            </div>
+            // <>
+            <Switch>
+                <Route exact path="/">
+                    <div>
+                        <Header></Header>
+                        <SearchBar parentCallback = {this.callbackFunction}/>
+                        <SearchResults dataFromParent = {this.state.parentCallback} />
+                    </div>
+                </Route>
+                <Route path="/about">
+                    <div>
+                        <Header></Header>
+                        <About />
+                    </div>
+                </Route>
+            </Switch>
+            // </>
         );
     }
     

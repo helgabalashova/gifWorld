@@ -1,0 +1,39 @@
+.navBar {
+    padding-top: 10px;
+}
+
+.menuIcon {
+    color: #c31bde;
+    font-size: 40px;
+}
+
+.displayButton {
+    display: none;
+}
+
+.showMenu {
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    width: 100%;
+    z-index: 2000;
+    height: 15vh;
+    background-color: #353a41;
+    /* overflow: hidden; */
+}
+
+.negative-index {
+    z-index: -1;
+}
+
+.menuLink {
+    padding: 10px 20px;
+    width: 100%;
+    color: #e9eaed;
+    text-decoration: none;
+}
+
+.linkDiv {
+    width: 100%;
+    padding: 10px 20px;
+}
