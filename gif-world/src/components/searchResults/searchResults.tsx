@@ -89,7 +89,7 @@ class SearchResults extends Component<{dataFromParent: string}, {}> {
                     ))}
                     </div>
                     <div className='modal displayNone' id="modal">
-                    <div className="buttons">
+                        <div className="buttons">
                             <div></div>
                             <RiChatDownloadFill className="button" onClick={() => this.downloadImage(this.state.url)}>Download</RiChatDownloadFill>
                             <AiFillCloseCircle className="button" onClick={() => this.openGif("")}>Close</AiFillCloseCircle>
