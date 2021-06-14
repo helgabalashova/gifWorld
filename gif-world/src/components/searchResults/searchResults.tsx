@@ -34,7 +34,7 @@ class SearchResults extends Component<{dataFromParent: string}, {}> {
             if (this.props.dataFromParent.length === 0) {
                 this.generateRandomGifs();
             } else {
-                fetch(`http://api.giphy.com/v1/gifs/search?q=${this.props.dataFromParent}&api_key=v39kGDxRW44cU2PinH70vVVl764cftGM&limit=10`)
+                fetch(`http://api.giphy.com/v1/gifs/search?q=${this.props.dataFromParent}&api_key=v39kGDxRW44cU2PinH70vVVl764cftGM&limit=20`)
                 .then(res => res.json())
                 .then(result => {
                     this.setState({
