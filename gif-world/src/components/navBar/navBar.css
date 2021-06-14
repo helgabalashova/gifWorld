@@ -1,5 +1,7 @@
 .navBar {
     padding-top: 10px;
+    justify-self: end;
+    padding-right: 40px;
 }
 
 .menuIcon {
