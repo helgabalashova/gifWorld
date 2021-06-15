@@ -18,6 +18,7 @@ class SearchResults extends Component<{dataFromParent: string}, {}> {
         
     }
     generateRandomGifs() {
+        this.setState({isLoaded: false});
         fetch("http://api.giphy.com/v1/gifs/trending?gif-world&api_key=v39kGDxRW44cU2PinH70vVVl764cftGM&limit=20")
                 .then(res => res.json())
                 .then(result => {
@@ -34,6 +35,7 @@ class SearchResults extends Component<{dataFromParent: string}, {}> {
             if (this.props.dataFromParent.length === 0) {
                 this.generateRandomGifs();
             } else {
+                this.setState({isLoaded: false});
                 fetch(`http://api.giphy.com/v1/gifs/search?q=${this.props.dataFromParent}&api_key=v39kGDxRW44cU2PinH70vVVl764cftGM&limit=20`)
                 .then(res => res.json())
                 .then(result => {
